@@ -1,18 +1,41 @@
-import { useState } from 'react'
-import { Hero } from './style'
+import { useEffect, useState } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+import { Hero, Inspiraction } from './style'
 import aboutHome from '../../bloodborne_img/hunter.webp'
 import heroBanner from '../../bloodborne_img/home_hero.png'
 import ps5Black from '../../bloodborne_img/ps5_black.png'
 import ps5White from '../../bloodborne_img/ps5_white.jpg'
 import ps4Black from '../../bloodborne_img/ps4_black.jpg'
 import ps4White from '../../bloodborne_img/ps4_white.jpg'
-import gehrman from '../../bloodborne_img/gehrman.png'
 import bloodLogo from '../../bloodborne_img/bloodborne.jpg'
 import fromLogo from '../../bloodborne_img/fromsoftware.webp'
+import guts from '../../bloodborne_img/berserk.png'
+import cosmic from '../../bloodborne_img/cosmic.png'
+import fet from '../../bloodborne_img/fetus.png'
+import mbrain from '../../bloodborne_img/motherbrain.jpg'
+import moz from '../../bloodborne_img/mozgus.jpg'
+import servant from '../../bloodborne_img/servant.jpg'
+import bbIcon from '../../bloodborne_img/bb_icon.png'
+import sacr from '../../bloodborne_img/sacrifice.jpg'
+import hpL from '../../bloodborne_img/hp.webp'
+import ebr from '../../bloodborne_img/ebrietas.png'
+import cth from '../../bloodborne_img/cthulhu.jpg'
+import rm from '../../bloodborne_img/rom.jpg'
+import aza from '../../bloodborne_img/aza.jpg'
 
 const Home = () => {
+  useEffect(() => {
+    Aos.init()
+  }, [])
   const [ps5, setPs5] = useState(ps5Black)
   const [ps4, setPs4] = useState(ps4Black)
+
+  const [motherbrain, setMBrain] = useState(mbrain)
+  const [mozgus, setMozgus] = useState(servant)
+  const [blood, setBlood] = useState(bbIcon)
+  const [ebrietas, setEbrietas] = useState(ebr)
+  const [rom, setRom] = useState(rm)
 
   return (
     <>
@@ -49,9 +72,126 @@ const Home = () => {
         </div>
         <img src={aboutHome} />
       </Hero>
-      <div>
-        <ul></ul>
-      </div>
+      <section id="inspiraction">
+        <Inspiraction>
+          <h2
+            style={{
+              textAlign: 'center',
+              fontFamily: 'tangerine',
+              marginBottom: '120px',
+              fontSize: '64px'
+            }}
+          >
+            Inspirações
+          </h2>
+          <div className="berserk" data-aos="fade-left">
+            <div className="text-inpiraction">
+              <h2>Berserk</h2>
+              <p>
+                Bloodborne foi fortemente influenciado pelo mangá Berserk, de
+                Kentaro Miura, especialmente em sua atmosfera sombria, estética
+                gótica e temas de horror e desesperança. Ambos compartilham um
+                universo onde o humano luta contra forças sobrenaturais e
+                inevitáveis, em cenários marcados por uma corrupção latente e um
+                pessimismo visceral. Os monstros grotescos, os cenários
+                desolados e a presença constante da loucura em Bloodborne
+                lembram os horrores cósmicos e infernais que Guts enfrenta em
+                Berserk. A armadura do Caçador e até certas armas, como a
+                Greatsword e a Saw Cleaver, trazem um pouco da brutalidade das
+                armas de Guts, e o mundo de Yharnam, com seu desespero e
+                criaturas amaldiçoadas, ecoa a crueldade de um mundo em que
+                monstros são humanos e deuses são cruéis. Em última análise,
+                Bloodborne presta homenagem a Berserk ao traduzir seus temas de
+                luta e escuridão para um formato interativo, permitindo que os
+                jogadores experimentem um pouco da jornada angustiante e heroica
+                que Miura concebeu para seu protagonista.
+              </p>
+              <div data-aos="fade-down" className="references">
+                <h2>Referências</h2>
+                <img
+                  src={motherbrain}
+                  onMouseOver={() => {
+                    setMBrain(fet)
+                  }}
+                  onMouseOut={() => {
+                    setMBrain(mbrain)
+                  }}
+                />
+                <img
+                  src={mozgus}
+                  onMouseOver={() => {
+                    setMozgus(moz)
+                  }}
+                  onMouseOut={() => {
+                    setMozgus(servant)
+                  }}
+                />
+                <img
+                  src={blood}
+                  onMouseOver={() => {
+                    setBlood(sacr)
+                  }}
+                  onMouseOut={() => {
+                    setBlood(bbIcon)
+                  }}
+                />
+              </div>
+            </div>
+            <img src={guts} />
+          </div>
+          <div className="cosmic-horror" data-aos="fade-right">
+            <img src={cosmic} />
+            <div className="text-inpiraction">
+              <h2>Horror cósmico e H.P Lovecraft</h2>
+              <p>
+                O horror cósmico e a obra de H.P. Lovecraft exercem uma
+                influência profunda sobre o jogo Bloodborne, desenvolvido pela
+                FromSoftware. Assim como nos contos de Lovecraft, Bloodborne
+                explora temas de medo do desconhecido, loucura e insignificância
+                humana frente a forças incompreensíveis e entidades cósmicas. Em
+                vez de vilões típicos, os antagonistas do jogo são horrores
+                sobrenaturais e seres antigos, incompreensíveis pela mente
+                humana, que levam os personagens ao limite da sanidade. A
+                ambientação sombria e gótica de Yharnam, a cidade onde o jogo se
+                passa, é permeada por mistérios e criaturas grotescas que
+                parecem existir em uma linha tênue entre pesadelos e realidade.
+                O conceito de uma antiga verdade ou conhecimento proibid
+                presente nos grandes contos de Lovecraft é central ao enredo de
+                Bloodborne: quanto mais o jogador desvenda a história do mundo e
+                se aproxima do conhecimento oculto, mais perturbador e surreal
+                se torna o ambiente, levando-o a enfrentar criaturas monstruosas
+                e aberrações cósmicas. No jogo, o nível de insight, uma mecânica
+                que representa o entendimento e a percepção do personagem sobre
+                o mundo, revela uma conexão direta com a obra de Lovecraft, onde
+                o conhecimento é uma faca de dois gumes, tanto uma revelação
+                quanto um caminho para a loucura.
+              </p>
+              <div data-aos="fade-down" className="references">
+                <h2>Referências</h2>
+                <img
+                  src={rom}
+                  onMouseOver={() => {
+                    setRom(aza)
+                  }}
+                  onMouseOut={() => {
+                    setRom(rm)
+                  }}
+                />
+                <img src={hpL} />
+                <img
+                  src={ebrietas}
+                  onMouseOver={() => {
+                    setEbrietas(cth)
+                  }}
+                  onMouseOut={() => {
+                    setEbrietas(ebr)
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        </Inspiraction>
+      </section>
     </>
   )
 }

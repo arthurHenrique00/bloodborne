@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+import { colors } from '../../styles'
 
 export const Hero = styled.div`
   display: flex;
   padding-top: 120px;
   padding-left: 220px;
-  padding-right: 220px;
+  padding-right: 100px;
   justify-content: space-between;
 
   h2 {
@@ -23,7 +24,7 @@ export const Hero = styled.div`
   }
 
   img {
-    width: 300px;
+    width: 350px;
     height: 500px;
   }
 
@@ -49,6 +50,56 @@ export const Hero = styled.div`
       &:hover {
         cursor: pointer;
       }
+    }
+  }
+`
+
+export const Inspiraction = styled.div`
+  padding-top: 60px;
+
+  .berserk {
+    display: flex;
+    margin-bottom: 160px;
+    padding-left: 150px;
+
+    img {
+      width: 500px;
+      height: 500px;
+    }
+  }
+
+  .cosmic-horror {
+    display: flex;
+
+    img {
+      width: 500px;
+      height: 500px;
+      margin-left: 25px;
+    }
+  }
+
+  .text-inpiraction {
+    h2 {
+      text-align: center;
+      font-family: tangerine;
+      font-size: 48px;
+      margin-bottom: 32px;
+    }
+
+    p {
+      width: 900px;
+    }
+  }
+
+  .references {
+    img {
+      width: 150px;
+      height: 150px;
+      border: 1px solid ${colors.white};
+      padding: 4px;
+      border-radius: 9px;
+      margin-left: 120px;
+      margin-top: 64px;
     }
   }
 `

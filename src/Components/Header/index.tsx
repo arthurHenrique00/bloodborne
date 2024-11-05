@@ -18,7 +18,7 @@ const Header = () => (
         <a href="">Home</a>
       </li>
       <li>
-        <a href="">Inspirações</a>
+        <a href="#inspiraction">Inspirações</a>
       </li>
       <li>
         <a href="">NPC &apos; S</a>

@@ -111,7 +111,8 @@ export const Characters = styled.div`
 
       img {
         text-align: center;
-        filter: grayscale(0.9) blur(1px);
+        filter: grayscale(0.9) blur(2px);
+        border-radius: 9px;
 
         &:hover {
           filter: grayscale(0);

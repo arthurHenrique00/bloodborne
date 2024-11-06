@@ -219,12 +219,12 @@ const Home = () => {
         </h2>
         <Characters>
           <div data-aos="fade-right">
-            <a href="">
+            <a href="/friendly">
               <img src={friendly} />
             </a>
           </div>
           <div data-aos="fade-left">
-            <a href="">
+            <a href="/enemy">
               <img src={enemy} />
             </a>
           </div>

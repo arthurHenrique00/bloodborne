@@ -6,7 +6,6 @@ export const HeaderS = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 9px;
 
   img {
     width: 40px;

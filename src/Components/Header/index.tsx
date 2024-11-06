@@ -21,7 +21,7 @@ const Header = () => (
         <a href="#inspiraction">Inspirações</a>
       </li>
       <li>
-        <a href="">NPC &apos; S</a>
+        <a href="#char">NPC &apos; S</a>
       </li>
     </ul>
   </HeaderS>

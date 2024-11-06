@@ -3,10 +3,15 @@ import { colors } from '../../styles'
 
 export const Hero = styled.div`
   display: flex;
-  padding-top: 120px;
+  padding-top: 40px;
   padding-left: 220px;
   padding-right: 100px;
   justify-content: space-between;
+
+  img {
+    width: 350px;
+    height: 500px;
+  }
 
   h2 {
     font-family: tangerine, sans serif;
@@ -17,45 +22,32 @@ export const Hero = styled.div`
   p {
     width: 550px;
     line-height: 22px;
+    padding-bottom: 25px;
 
     &:hover {
       text-decoration: underline;
     }
   }
 
-  img {
-    width: 350px;
-    height: 500px;
-  }
-
   a {
     margin-right: 120px;
 
     img {
-      margin-top: 50px;
+      margin-top: 20px;
       width: 100px;
       height: 50px;
       border-radius: 9px;
+      margin-bottom: 20px;
     }
   }
 
-  .logos {
-    img {
-      width: 170px;
-      height: 70px;
-      border-radius: 9px;
-      margin-right: 50px;
-      margin-top: 100px;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
+  iframe {
+    border-radius: 9px;
   }
 `
 
 export const Inspiraction = styled.div`
-  padding-top: 60px;
+  padding-top: 22px;
 
   .berserk {
     display: flex;
@@ -89,17 +81,42 @@ export const Inspiraction = styled.div`
     p {
       width: 900px;
     }
-  }
 
-  .references {
-    img {
-      width: 150px;
-      height: 150px;
-      border: 1px solid ${colors.white};
-      padding: 4px;
-      border-radius: 9px;
-      margin-left: 120px;
-      margin-top: 64px;
+
+.references {
+      div {
+      display: flex;
+      img {
+        width: 150px;
+        height: 150px;
+        border: 1px solid ${colors.white};
+        padding: 4px;
+        border-radius: 9px;
+        margin-left: 120px;
+        margin-top: 64px;
+      }
+    }
+      }
+`
+
+export const Characters = styled.div`
+  display: flex;
+  margin-bottom: 100px;
+  height: 300px;
+  padding: 0 300px;
+
+  div {
+    a {
+      margin-right: 24px;
+
+      img {
+        text-align: center;
+        filter: grayscale(0.9) blur(1px);
+
+        &:hover {
+          filter: grayscale(0);
+        }
+      }
     }
   }
 `

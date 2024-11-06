@@ -1,15 +1,13 @@
 import { useEffect, useState } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import { Hero, Inspiraction } from './style'
+import { Characters, Hero, Inspiraction } from './style'
 import aboutHome from '../../bloodborne_img/hunter.webp'
 import heroBanner from '../../bloodborne_img/home_hero.png'
 import ps5Black from '../../bloodborne_img/ps5_black.png'
 import ps5White from '../../bloodborne_img/ps5_white.jpg'
 import ps4Black from '../../bloodborne_img/ps4_black.jpg'
 import ps4White from '../../bloodborne_img/ps4_white.jpg'
-import bloodLogo from '../../bloodborne_img/bloodborne.jpg'
-import fromLogo from '../../bloodborne_img/fromsoftware.webp'
 import guts from '../../bloodborne_img/berserk.png'
 import cosmic from '../../bloodborne_img/cosmic.png'
 import fet from '../../bloodborne_img/fetus.png'
@@ -23,6 +21,8 @@ import ebr from '../../bloodborne_img/ebrietas.png'
 import cth from '../../bloodborne_img/cthulhu.jpg'
 import rm from '../../bloodborne_img/rom.jpg'
 import aza from '../../bloodborne_img/aza.jpg'
+import friendly from '../../bloodborne_img/friendly.jpg'
+import enemy from '../../bloodborne_img/enemy.jpg'
 
 const Home = () => {
   useEffect(() => {
@@ -51,24 +51,27 @@ const Home = () => {
             Yharnam com gráficos aprimorados e tempos de carregamento quase
             inexistentes. *
           </p>
-          <div className="logos">
-            <img src={bloodLogo} />
-            <img src={fromLogo} />
+          <iframe
+            width="360"
+            height="215"
+            src="https://www.youtube.com/embed/G203e1HhixY?si=X8XOv0Lca5pB9fHa"
+          />
+          <div>
+            <a href="https://www.playstation.com/pt-br/games/bloodborne/">
+              <img
+                src={ps5}
+                onMouseOver={() => setPs5(ps5White)}
+                onMouseOut={() => setPs5(ps5Black)}
+              />
+            </a>
+            <a href="https://www.playstation.com/pt-br/games/bloodborne/">
+              <img
+                src={ps4}
+                onMouseOver={() => setPs4(ps4White)}
+                onMouseOut={() => setPs4(ps4Black)}
+              />
+            </a>
           </div>
-          <a href="https://www.playstation.com/pt-br/games/bloodborne/">
-            <img
-              src={ps5}
-              onMouseOver={() => setPs5(ps5White)}
-              onMouseOut={() => setPs5(ps5Black)}
-            />
-          </a>
-          <a href="https://www.playstation.com/pt-br/games/bloodborne/">
-            <img
-              src={ps4}
-              onMouseOver={() => setPs4(ps4White)}
-              onMouseOut={() => setPs4(ps4Black)}
-            />
-          </a>
         </div>
         <img src={aboutHome} />
       </Hero>
@@ -108,33 +111,35 @@ const Home = () => {
               </p>
               <div data-aos="fade-down" className="references">
                 <h2>Referências</h2>
-                <img
-                  src={motherbrain}
-                  onMouseOver={() => {
-                    setMBrain(fet)
-                  }}
-                  onMouseOut={() => {
-                    setMBrain(mbrain)
-                  }}
-                />
-                <img
-                  src={mozgus}
-                  onMouseOver={() => {
-                    setMozgus(moz)
-                  }}
-                  onMouseOut={() => {
-                    setMozgus(servant)
-                  }}
-                />
-                <img
-                  src={blood}
-                  onMouseOver={() => {
-                    setBlood(sacr)
-                  }}
-                  onMouseOut={() => {
-                    setBlood(bbIcon)
-                  }}
-                />
+                <div>
+                  <img
+                    src={motherbrain}
+                    onMouseOver={() => {
+                      setMBrain(fet)
+                    }}
+                    onMouseOut={() => {
+                      setMBrain(mbrain)
+                    }}
+                  />
+                  <img
+                    src={mozgus}
+                    onMouseOver={() => {
+                      setMozgus(moz)
+                    }}
+                    onMouseOut={() => {
+                      setMozgus(servant)
+                    }}
+                  />
+                  <img
+                    src={blood}
+                    onMouseOver={() => {
+                      setBlood(sacr)
+                    }}
+                    onMouseOut={() => {
+                      setBlood(bbIcon)
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <img src={guts} />
@@ -168,29 +173,62 @@ const Home = () => {
               </p>
               <div data-aos="fade-down" className="references">
                 <h2>Referências</h2>
-                <img
-                  src={rom}
-                  onMouseOver={() => {
-                    setRom(aza)
-                  }}
-                  onMouseOut={() => {
-                    setRom(rm)
-                  }}
-                />
-                <img src={hpL} />
-                <img
-                  src={ebrietas}
-                  onMouseOver={() => {
-                    setEbrietas(cth)
-                  }}
-                  onMouseOut={() => {
-                    setEbrietas(ebr)
-                  }}
-                />
+                <div>
+                  <div className="refExpl">
+                    <img
+                      src={rom}
+                      onMouseOver={() => {
+                        setRom(aza)
+                      }}
+                      onMouseOut={() => {
+                        setRom(rm)
+                      }}
+                    />
+                  </div>
+                  <div className="refExpl">
+                    <img
+                      src={ebrietas}
+                      onMouseOver={() => {
+                        setEbrietas(cth)
+                      }}
+                      onMouseOut={() => {
+                        setEbrietas(ebr)
+                      }}
+                    />
+                  </div>
+                  <div className="refExpl">
+                    <img src={hpL} />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </Inspiraction>
+      </section>
+      <section id="char">
+        <h2
+          style={{
+            textAlign: 'center',
+            fontFamily: 'tangerine',
+            marginBottom: '120px',
+            marginTop: '170px',
+            fontSize: '64px'
+          }}
+        >
+          Personagens
+        </h2>
+        <Characters>
+          <div data-aos="fade-right">
+            <a href="">
+              <img src={friendly} />
+            </a>
+          </div>
+          <div data-aos="fade-left">
+            <a href="">
+              <img src={enemy} />
+            </a>
+          </div>
+        </Characters>
       </section>
     </>
   )

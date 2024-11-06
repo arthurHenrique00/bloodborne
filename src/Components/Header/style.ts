@@ -9,9 +9,9 @@ export const HeaderS = styled.header`
   border-radius: 9px;
 
   img {
-    width: 50px;
-    height: 50px;
-    margin: 26px 26px;
+    width: 40px;
+    height: 40px;
+    margin: 20px 26px;
     border-radius: 50%;
   }
 
@@ -26,8 +26,9 @@ export const HeaderS = styled.header`
 
   a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: bold;
     color: ${colors.white};
+    font-family: tangerine;
   }
 `

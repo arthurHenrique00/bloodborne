@@ -215,7 +215,7 @@ const Home = () => {
             fontFamily: 'tangerine',
             marginBottom: '120px',
             marginTop: '170px',
-            fontSize: '64px'
+            fontSize: '65px'
           }}
         >
           Personagens

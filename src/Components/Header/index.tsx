@@ -23,6 +23,10 @@ const Header = () => (
       <li>
         <a href="#char">NPC &apos; S</a>
       </li>
+
+      <li>
+        <a href="#char">Armas</a>
+      </li>
     </ul>
   </HeaderS>
 )

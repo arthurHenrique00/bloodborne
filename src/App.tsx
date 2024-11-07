@@ -4,6 +4,7 @@ import Header from './Components/Header'
 import Home from './Components/Home'
 import GlobalStyle from './styles'
 import Friendly from './Components/Pages/Friendly'
+import Enemies from './Components/Pages/Enemy'
 
 const rotas = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const rotas = createBrowserRouter([
   {
     path: '/friendly',
     element: <Friendly />
+  },
+  {
+    path: '/enemy',
+    element: <Enemies />
   }
 ])
 

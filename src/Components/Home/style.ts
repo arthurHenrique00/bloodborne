@@ -101,7 +101,6 @@ export const Inspiraction = styled.div`
 
 export const Characters = styled.div`
   display: flex;
-  margin-bottom: 100px;
   height: 300px;
   padding: 0 300px;
 
@@ -118,6 +117,32 @@ export const Characters = styled.div`
           filter: grayscale(0);
         }
       }
+    }
+  }
+`
+
+export const Weapons = styled.section`
+  text-align: center;
+
+  h2 {
+    font-family: tangerine;
+    font-size: 64px;
+    margin: 120px 0;
+  }
+
+  img {
+    filter: grayscale(100%);
+    width: 300px;
+    height: 350px;
+
+    &:hover {
+      filter: grayscale(0%);
+    }
+  }
+
+  .friends {
+    img {
+      -webkit-box: left 0 linear-gradient(to left, #0000, #0009);
     }
   }
 `

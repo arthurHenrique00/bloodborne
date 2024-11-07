@@ -3,7 +3,6 @@ import Aos from 'aos'
 
 import { Banner, Friend } from './style'
 import Footer from '../../Footer'
-import Header from '../../Header'
 import bg_castle from '../../../bloodborne_img/char-back.jpg'
 import eileen from '../../../bloodborne_img/eileen.webp'
 import eileen_1 from '../../../bloodborne_img/eileen_1.png'
@@ -18,6 +17,7 @@ import valtr_1 from '../../../bloodborne_img/valtr_1.png'
 import gehr from '../../../bloodborne_img/gehrman.png'
 import gehr_1 from '../../../bloodborne_img/gehrman_1.png'
 import banner_char from '../../../bloodborne_img/banner_char.png'
+import HeaderT from '../../HeaderSec'
 
 const Friendly = () => {
   useEffect(() => {
@@ -32,7 +32,7 @@ const Friendly = () => {
         backgroundSize: 'cover'
       }}
     >
-      <Header />
+      <HeaderT />
       <Banner>
         <div>
           <img className="bannerchar" src={banner_char} />

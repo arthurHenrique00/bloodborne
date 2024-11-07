@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import { Characters, Hero, Inspiraction } from './style'
+import { Characters, Hero, Inspiraction, Weapons } from './style'
 import aboutHome from '../../bloodborne_img/hunter.webp'
 import heroBanner from '../../bloodborne_img/home_hero.png'
 import ps5Black from '../../bloodborne_img/ps5_black.png'
@@ -23,6 +23,8 @@ import rm from '../../bloodborne_img/rom.jpg'
 import aza from '../../bloodborne_img/aza.jpg'
 import friendly from '../../bloodborne_img/friendly.jpg'
 import enemy from '../../bloodborne_img/enemy.jpg'
+import weapons from '../../bloodborne_img/weapons_1.png'
+import weapons_1 from '../../bloodborne_img/weapon.gif'
 
 const Home = () => {
   useEffect(() => {
@@ -36,6 +38,7 @@ const Home = () => {
   const [blood, setBlood] = useState(bbIcon)
   const [ebrietas, setEbrietas] = useState(ebr)
   const [rom, setRom] = useState(rm)
+  const [wea, setWea] = useState(weapons)
 
   return (
     <>
@@ -218,18 +221,34 @@ const Home = () => {
           Personagens
         </h2>
         <Characters>
-          <div data-aos="fade-right">
+          <div className="friends" data-aos="fade-right">
             <a href="/friendly">
               <img src={friendly} />
             </a>
           </div>
-          <div data-aos="fade-left">
+          <div className="boss" data-aos="fade-left">
             <a href="/enemy">
               <img src={enemy} />
             </a>
           </div>
         </Characters>
       </section>
+      <Weapons id="weapon">
+        <h2>Armas</h2>
+        <div data-aos="fade-down">
+          <a href="/weapons">
+            <img
+              src={wea}
+              onMouseOver={() => {
+                setWea(weapons_1)
+              }}
+              onMouseOut={() => {
+                setWea(weapons)
+              }}
+            />
+          </a>
+        </div>
+      </Weapons>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Enemy = styled.div`
+export const EnemyCarousel = styled.div`
   margin: 80px 300px;
   display: flex;
   width: 1000px;
@@ -24,6 +24,30 @@ export const Enemy = styled.div`
     &:hover {
       flex: 6;
       filter: brightness(110%);
+    }
+  }
+`
+
+export const Enemy = styled.section`
+  .boss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 300px;
+
+    > img {
+      margin-right: 64px;
+    }
+  }
+
+  .weapons {
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    gap: 26px;
+
+    img {
+      width: 50px;
+      height: 50px;
     }
   }
 `

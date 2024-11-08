@@ -15,9 +15,6 @@ const Header = () => (
     </a>
     <ul>
       <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
         <a href="#inspiraction">Inspirações</a>
       </li>
       <li>
@@ -25,7 +22,7 @@ const Header = () => (
       </li>
 
       <li>
-        <a href="#char">Armas</a>
+        <a href="#weapon">Armas</a>
       </li>
     </ul>
   </HeaderS>

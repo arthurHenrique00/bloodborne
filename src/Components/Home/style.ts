@@ -33,7 +33,7 @@ export const Hero = styled.div`
     margin-right: 120px;
 
     img {
-      margin-top: 20px;
+      margin-top: 40px;
       width: 100px;
       height: 50px;
       border-radius: 9px;
@@ -107,7 +107,6 @@ export const Characters = styled.div`
   div {
     a {
       margin-right: 24px;
-
       img {
         text-align: center;
         filter: grayscale(0.9) blur(2px);

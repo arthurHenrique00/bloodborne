@@ -98,43 +98,54 @@ const Enemies = () => {
       </section>
       <Enemy>
         <div id="maria" className="boss" data-aos="fade-left">
+          <h2>Lady Maria</h2>
           <img src={lady_maria} />
           <div className="weapons">
             <img src={m_weapon} />
-            <img src={m_1} />
-            <img src={m_2} />
-            <img src={m_3} />
-            <img src={m_4} />
+            <div className="set">
+              <img src={m_1} />
+              <img src={m_2} />
+              <img src={m_3} />
+              <img src={m_4} />
+            </div>
           </div>
         </div>
         <div id="gehrman" className="boss" data-aos="fade-right">
+          <h2>Gehrman</h2>
           <img src={gehrman_boss} />
           <div className="weapons">
             <img src={gehrman_weapon} />
-            <img src={g_1} />
-            <img src={g_2} />
-            <img src={g_3} />
+            <div className="set">
+              <img src={g_1} />
+              <img src={g_2} />
+              <img src={g_3} />
+            </div>
           </div>
         </div>
-        <div className="boss" data-aos="fade-left">
+        <div id="gascoigne" className="boss" data-aos="fade-left">
+          <h2>Gascoigne</h2>
           <img src={gascoigne_boss} />
           <div className="weapons">
             <img src={gascoigne_axe} />
             <img src={gascoigne_pistol} />
-            <img src={ga_1} />
-            <img src={ga_2} />
-            <img src={ga_3} />
-            <img src={ga_4} />
+            <div className="set">
+              <img src={ga_1} />
+              <img src={ga_2} />
+              <img src={ga_3} />
+              <img src={ga_4} />
+            </div>
           </div>
         </div>
-        <div className="boss" data-aos="fade-right">
+        <div id="logarius" className="boss" data-aos="fade-right">
+          <h2>Martyr Logarius</h2>
           <img src={logarius_boss} />
           <div className="weapons">
             <img src={logarius_foice} />
             <img src={logarius_wheel} />
           </div>
         </div>
-        <div className="boss" data-aos="fade-down">
+        <div id="ludwig" className="boss" data-aos="fade-down">
+          <h2>Ludwig</h2>
           <img src={ludwig_boss} />
           <div className="weapons">
             <img src={ludwig_blade} />

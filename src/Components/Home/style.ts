@@ -120,7 +120,7 @@ export const Characters = styled.div`
   }
 `
 
-export const Weapons = styled.section`
+export const WeaponsSec = styled.section`
   text-align: center;
 
   h2 {

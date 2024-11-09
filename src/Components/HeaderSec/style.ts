@@ -8,8 +8,8 @@ export const Headerts = styled.header`
     text-align: center;
 
     img {
-      width: 150px;
-      height: 40px;
+      width: 200px;
+      height: 50px;
       margin: 20px 26px;
     }
   }

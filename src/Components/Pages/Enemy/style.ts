@@ -7,7 +7,6 @@ export const EnemyCarousel = styled.div`
   width: 1000px;
 
   text-align: center;
-  font-family: ;
   font-size: 64px;
 
   div,

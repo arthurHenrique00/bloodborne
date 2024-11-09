@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import { Characters, Hero, Inspiraction, Weapons } from './style'
+import { Characters, Hero, Inspiraction, WeaponsSec } from './style'
 import aboutHome from '../../bloodborne_img/hunter.webp'
 import heroBanner from '../../bloodborne_img/home_hero.png'
 import ps5Black from '../../bloodborne_img/ps5_black.png'
@@ -233,7 +233,7 @@ const Home = () => {
           </div>
         </Characters>
       </section>
-      <Weapons id="weapon">
+      <WeaponsSec id="weapon">
         <h2>Armas</h2>
         <div data-aos="fade-down">
           <a href="/weapons">
@@ -248,7 +248,7 @@ const Home = () => {
             />
           </a>
         </div>
-      </Weapons>
+      </WeaponsSec>
     </>
   )
 }
